@@ -53,7 +53,7 @@ export default function Home() {
         </div>
 
         <button
-          className="px-10 py-4 bg-white text-2xl font-medium rounded-lg shadow-md hover:shadow-lg transition relative z-10"
+          className="px-10 py-4 bg-white text-2xl font-medium rounded-lg shadow-md hover:shadow-lg hover:cursor-pointer transition relative z-10"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >
