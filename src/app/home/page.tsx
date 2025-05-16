@@ -16,6 +16,7 @@ export default function Home() {
               <InfoButton
                 title="ABOUT US"
                 imageUrl="/IMG_0642.png"
+                hoverImageUrl="/IMG_0643.png"
                 alt="about us"
               />
             </Link>
@@ -23,6 +24,7 @@ export default function Home() {
               <InfoButton
                 title="THE PROJECTS"
                 imageUrl="/IMG_0643.png"
+                hoverImageUrl="/IMG_0644.png"
                 alt="the projects"
               />
             </Link>
@@ -32,6 +34,7 @@ export default function Home() {
               <InfoButton
                 title="COLAB WITH US"
                 imageUrl="/IMG_0644.png"
+                hoverImageUrl="/IMG_0642.png"
                 alt="about us"
               />
             </Link>
