@@ -2,7 +2,7 @@ import InfoButton from "@/components/infoButton";
 import Logo from "@/components/logo";
 import Link from "next/link";
 
-export default function Home() {
+export default function Connect() {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
       <div className="absolute mx-15">
@@ -20,7 +20,7 @@ export default function Home() {
                 alt="about us"
               />
             </Link>
-            <Link href={"/"}>
+            <Link href={"/projects"}>
               <InfoButton
                 title="THE PROJECTS"
                 imageUrl="/IMG_0643.png"
@@ -30,7 +30,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="">
-            <Link href={"/"}>
+            <Link href={"/colab"}>
               <InfoButton
                 title="COLAB WITH US"
                 imageUrl="/IMG_0644.png"
