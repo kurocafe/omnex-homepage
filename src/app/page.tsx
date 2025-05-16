@@ -17,7 +17,7 @@ export default function Home() {
       <div className="relative flex flex-col items-center">
         <div
           className={`absolute flex gap-2 transition-all duration-600 ease-out -space-x-10
-            ${hovered ? "-translate-y-12 opacity-100 scale-100" : "translate-y-0 opacity-0 scale-70"
+            ${hovered ? "-translate-y-12 opacity-100 scale-160" : "translate-y-0 opacity-0 scale-90"
             }`}
         >
           <div className="relative w-24 h-16 top-4 rounded-2xl overflow-hidden shadow-lg rotate-3 z-10 scale-80">
@@ -47,9 +47,9 @@ export default function Home() {
         </div>
 
 
-        <Link href={"/home"}>
+        <Link href={"/connect"}>
           <button
-            className="px-10 py-4 bg-white text-gray-500 text-2xl font-medium rounded-lg shadow-md hover:shadow-lg hover:cursor-pointer hover:text-black transition duration-600 relative z-10"
+            className="px-10 py-6 bg-white text-gray-500 text-5xl font-serif rounded-lg shadow-md hover:shadow-lg hover:cursor-pointer hover:text-black transition duration-600 relative z-10"
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
           >

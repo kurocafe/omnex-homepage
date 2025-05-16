@@ -28,7 +28,7 @@ export default function InfoButton({ title, imageUrl, hoverImageUrl, alt }: Info
           alt={alt || title}
           fill
           className={`object-cover rounded-[70px] transition-all duration-300
-            ${hovered ? "rotate-6" : "rotate-0"
+            ${hovered ? "rotate-12" : "rotate-0"
             }`}
         />
         <Image
