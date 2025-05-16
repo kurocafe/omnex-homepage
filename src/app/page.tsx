@@ -1,24 +1,17 @@
 'use client';
 
-import Footer from "@/components/footer";
 import Image from "next/image";
 import React, { useState } from "react";
-import image1 from "../../public/IMG_0642.png";
-import image3 from "../../public/IMG_0643.png";
-import image2 from "../../public/IMG_0644.png";
 import Link from "next/link";
+import Logo from "@/components/logo";
 
 export default function Home() {
   const [hovered, setHovered] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-center">
-      <div className="text-4xl font-bold mb-2">
-        onmex
-      </div>
-      <div className="text-sm text-gray-600 mb-16">
-        <p>Beyond Borders,</p>
-        <p>Beyond Limits.</p>
+      <div className="mb-40">
+        <Logo />
       </div>
 
       <div className="relative flex flex-col items-center">
@@ -29,7 +22,7 @@ export default function Home() {
         >
           <div className="relative w-24 h-16 top-4 rounded-2xl overflow-hidden shadow-lg rotate-3 z-10 scale-80">
             <Image
-              src={image1}
+              src={"/IMG_0642.png"}
               alt="img1"
               fill
               style={{ objectFit: "cover" }}
@@ -37,7 +30,7 @@ export default function Home() {
           </div>
           <div className="relative w-24 h-16 rounded-2xl overflow-hidden shadow-lg rotate-6 ">
             <Image
-              src={image2}
+              src={"/IMG_0644.png"}
               alt="img2"
               fill
               style={{ objectFit: "cover" }}
@@ -45,7 +38,7 @@ export default function Home() {
           </div>
           <div className="relative w-24 h-16 top-4 rounded-2xl overflow-hidden shadow-lg rotate-24 scale-90">
             <Image
-              src={image3}
+              src={"/IMG_0643.png"}
               alt="img3"
               fill
               style={{ objectFit: "cover" }}
