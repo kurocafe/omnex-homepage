@@ -17,7 +17,7 @@ export default function Home() {
       <div className="relative flex flex-col items-center">
         <div
           className={`absolute flex gap-2 transition-all duration-600 ease-out -space-x-10
-            ${hovered ? "-translate-y-12 opacity-100 scale-160" : "translate-y-0 opacity-0 scale-90"
+            ${hovered ? "-translate-y-16 opacity-100 scale-160" : "translate-y-0 opacity-0 scale-90"
             }`}
         >
           <div className="relative w-24 h-16 top-4 rounded-2xl overflow-hidden shadow-lg rotate-3 z-10 scale-80">

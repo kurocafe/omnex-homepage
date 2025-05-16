@@ -1,6 +1,6 @@
 export default function Logo() {
   return (
-    <header className="pt-16 ol-24 text-center">
+    <header className="pt-8 ol-24 text-center">
       <h1 className="font-serif text-5xl font-bold mb-2">
         omnex
       </h1>
