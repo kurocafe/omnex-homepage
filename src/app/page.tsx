@@ -23,7 +23,7 @@ export default function Home() {
       <div className="relative flex flex-col items-center">
         <div
           className={`absolute flex gap-2 transition-all duration-600 ease-out
-            ${hovered ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+            ${hovered ? "-translate-y-12 opacity-100" : "translate-y-0 opacity-0"
             }`}
         >
           <div className="relative w-24 h-16 rounded-2xl overflow-hidden shadow-lg">
