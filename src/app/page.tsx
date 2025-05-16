@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import image1 from "../../public/IMG_0642.png";
 import image3 from "../../public/IMG_0643.png";
 import image2 from "../../public/IMG_0644.png";
+import Link from "next/link";
 
 export default function Home() {
   const [hovered, setHovered] = useState(false);
@@ -52,15 +53,17 @@ export default function Home() {
           </div>
         </div>
 
-        <button
-          className="px-10 py-4 bg-white text-gray-500 text-2xl font-medium rounded-lg shadow-md hover:shadow-lg hover:cursor-pointer hover:text-black transition duration-600 relative z-10"
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
-        >
-          connect
-        </button>
+
+        <Link href={"/home"}>
+          <button
+            className="px-10 py-4 bg-white text-gray-500 text-2xl font-medium rounded-lg shadow-md hover:shadow-lg hover:cursor-pointer hover:text-black transition duration-600 relative z-10"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+          >
+            connect
+          </button>
+        </Link>
       </div>
-      <Footer />
     </div >
   );
 }
