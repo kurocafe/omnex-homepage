@@ -4,8 +4,8 @@ import Footer from "@/components/footer";
 import Image from "next/image";
 import React, { useState } from "react";
 import image1 from "../../public/IMG_0642.png";
-import image2 from "../../public/IMG_0643.png";
-import image3 from "../../public/IMG_0644.png";
+import image3 from "../../public/IMG_0643.png";
+import image2 from "../../public/IMG_0644.png";
 
 export default function Home() {
   const [hovered, setHovered] = useState(false);
@@ -22,11 +22,11 @@ export default function Home() {
 
       <div className="relative flex flex-col items-center">
         <div
-          className={`absolute flex gap-2 transition-all duration-600 ease-out
-            ${hovered ? "-translate-y-12 opacity-100" : "translate-y-0 opacity-0"
+          className={`absolute flex gap-2 transition-all duration-600 ease-out -space-x-10
+            ${hovered ? "-translate-y-12 opacity-100 scale-100" : "translate-y-0 opacity-0 scale-70"
             }`}
         >
-          <div className="relative w-24 h-16 rounded-2xl overflow-hidden shadow-lg">
+          <div className="relative w-24 h-16 top-4 rounded-2xl overflow-hidden shadow-lg rotate-3 z-10 scale-80">
             <Image
               src={image1}
               alt="img1"
@@ -34,7 +34,7 @@ export default function Home() {
               style={{ objectFit: "cover" }}
             />
           </div>
-          <div className="relative w-24 h-16 rounded-2xl overflow-hidden shadow-lg">
+          <div className="relative w-24 h-16 rounded-2xl overflow-hidden shadow-lg rotate-6 ">
             <Image
               src={image2}
               alt="img2"
@@ -42,7 +42,7 @@ export default function Home() {
               style={{ objectFit: "cover" }}
             />
           </div>
-          <div className="relative w-24 h-16 rounded-2xl overflow-hidden shadow-lg">
+          <div className="relative w-24 h-16 top-4 rounded-2xl overflow-hidden shadow-lg rotate-24 scale-90">
             <Image
               src={image3}
               alt="img3"
