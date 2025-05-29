@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
 import Logo from "@/components/logo";
+import FadeLink from "@/components/FadeLink";
 
 export default function Home() {
   const [hovered, setHovered] = useState(false);
@@ -46,8 +47,7 @@ export default function Home() {
           </div>
         </div>
 
-
-        <Link href={"/connect"}>
+        <Link href="/connect">
           <button
             className="px-10 py-6 bg-white text-gray-500 text-5xl font-serif rounded-lg shadow-md hover:shadow-lg hover:cursor-pointer hover:text-black transition duration-600 relative z-10"
             onMouseEnter={() => setHovered(true)}
@@ -56,6 +56,7 @@ export default function Home() {
             connect
           </button>
         </Link>
+
       </div>
     </div >
   );
