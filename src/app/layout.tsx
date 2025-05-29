@@ -27,13 +27,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <FadeProvider>
-          <PageTransition>
-            <Footer />
-            {children}
-          </PageTransition>
-        </FadeProvider>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen overflow-y-scroll`}>
+        <PageTransition>
+          <Footer />
+          {children}
+        </PageTransition>
       </body>
     </html>
   );
