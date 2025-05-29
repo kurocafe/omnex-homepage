@@ -79,13 +79,14 @@ export default function AboutPage() {
                 {isEven ? (
                   <>
                     <div
-                      className='mb-2 text-lg underline-offset-2 hover:underline cursor-pointer transition duration-300'
+                      className='mb-2 text-lg cursor-pointer transition duration-300 group'
                       onClick={(e) => {
                         e.stopPropagation();
                         handleClick(item.year)
                       }}
                     >
                       {item.year}
+                      <span className="absolute bottom-43 left-0 w-0 h-[2px] bg-white transition-all duration-200 group-hover:w-full"></span>
                     </div>
                     <div className='w-1 h-16 mb-25 bg-gray-300/80' />
                   </>
@@ -93,13 +94,14 @@ export default function AboutPage() {
                   <>
                     <div className='w-1 h-16 mt-29 bg-gray-300/80' />
                     <div
-                      className='mt-2 text-lg underline-offset-2 cursor-pointer transition-all duration-300 hover:underline'
+                      className='mt-2 text-lg cursor-pointer transition duration-300 group'
                       onClick={(e) => {
                         e.stopPropagation();
                         handleClick(item.year)
                       }}
                     >
                       {item.year}
+                      <span className="absolute -bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-200 group-hover:w-full"></span>
                     </div>
                   </>
                 )}
