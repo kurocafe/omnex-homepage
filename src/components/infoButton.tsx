@@ -19,7 +19,7 @@ export default function InfoButton({ title, imageUrl, hoverImageUrl, alt }: Info
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <span className="font-serif font-semibold text-lg mb-2 self-start">
+      <span className="font-serif font-semibold text-lg mb-4 self-start">
         {title}
       </span>
       <div className="relative w-60 h-32">

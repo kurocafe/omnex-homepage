@@ -10,7 +10,7 @@ export default function Connect() {
       </div>
 
       <main className="flex-1 flex flex-col items-center justify-center">
-        <div className="flex flex-col items-center space-y-8">
+        <div className="flex flex-col items-center space-y-10">
           <div className="flex space-x-60">
             <Link href={"/about"}>
               <InfoButton
