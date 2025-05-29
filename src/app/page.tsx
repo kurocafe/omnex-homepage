@@ -4,7 +4,6 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
 import Logo from "@/components/logo";
-import FadeLink from "@/components/FadeLink";
 
 export default function Home() {
   const [hovered, setHovered] = useState(false);
