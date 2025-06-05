@@ -4,6 +4,7 @@ import BackButtonWrapper from '@/components/BackButtonWrapper';
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 
+// 後でテキストデータ編集する
 const timelineData = [
   { year: 1985, text: "1985" },
   { year: 1991, text: "1991" },
