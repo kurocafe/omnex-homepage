@@ -6,15 +6,15 @@ import React, { useEffect, useRef, useState } from 'react';
 
 // 後でテキストデータ編集する
 const timelineData = [
-  { year: 1985, text: "1985" },
-  { year: 1991, text: "1991" },
-  { year: 1995, text: "1995" },
-  { year: 2002, text: "2002" },
-  { year: 2003, text: "2003" },
-  { year: 2006, text: "2006" },
-  { year: 2007, text: "2007" },
-  { year: 2015, text: "2015" },
-  { year: 2025, text: "2025" },
+  { year: 1985, text: "PASC KAN (current OMNEX) founded" },
+  { year: 1991, text: "PASC KAN revamped and changed \nname to PASC Corporation" },
+  { year: 1995, text: "Establish Sakura Food Company Limited (Japanese and Vietnam capital in Vietnam) under a management contract After that, was received entrusted with contract for managing of company" },
+  { year: 2002, text: "Renamed to Hot One Co.,Ltd" },
+  { year: 2003, text: "Continued the business" },
+  { year: 2006, text: "Established Yamato Foods Company Limited (Japanese capital in Vietnam) under a management contract. After that, was received entrusted with contract for managing of company" },
+  { year: 2007, text: "Dissolved management contract with Yamato Foods Company Limited" },
+  { year: 2015, text: "Dissolved management contract with Sakura Foods Company Limited" },
+  { year: 2025, text: "Changed the name of Hot One Co.,Ltd to Onmex Co.,Ltd, and had two representative directions" },
 ]
 
 export default function AboutPage() {
@@ -121,7 +121,7 @@ export default function AboutPage() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
                       transition={{ duration: 0.3 }}
-                      className="absolute -top-32 bg-white text-black px-4 py-2 rounded-lg shadow-md z-50 w-60 text-center text-sm"
+                      className="absolute -top-32 bg-white text-black px-6 py-6 rounded-lg shadow-md z-50 w-80 text-center text-sm"
                     >
                       {item.text}
                     </motion.div>
