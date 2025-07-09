@@ -1,4 +1,5 @@
 import BackButtonWrapper from "@/components/BackButtonWrapper";
+import ContactForm from "@/components/ContsctForm";
 
 export default function Colab() {
   return (
@@ -12,6 +13,7 @@ export default function Colab() {
         <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start font-serif">
           <h1 className="text-4xl font-bold">Colab With Us</h1>
           <p className="text-lg">This is the colab page of our application.</p>
+          <ContactForm />
         </main>
         <BackButtonWrapper />
       </div>
