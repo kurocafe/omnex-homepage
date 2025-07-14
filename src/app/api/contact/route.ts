@@ -5,21 +5,34 @@ import { NextResponse } from 'next/server';
 export async function POST(req: Request) {
   const data = await req.json();
 
-  const transporter = nodemailer.createTransport({
+  // 通知用
+  const infoTransporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: process.env.GMAIL_USER, // 例: youraddress@gmail.com
-      pass: process.env.GMAIL_PASS, // Gmailアプリパスワード
+      user: process.env.INFO_USER, // 例: youraddress@gmail.com
+      pass: process.env.INFO_PASS, // Gmailアプリパスワード
     },
   });
-
-  console.log("GMAIL_USER", process.env.GMAIL_USER);
-  console.log("GMAIL_PASS", process.env.GMAIL_PASS);
+  
+  // 通知用
+  const replyTransporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.REPLY_USER, // 例: youraddress@gmail.com
+      pass: process.env.REPLY_PASS, // Gmailアプリパスワード
+    },
+  });
+  console.log("INFO_USER", process.env.INFO_USER);
+  console.log("INFO_PASS", process.env.INFO_PASS);
+  console.log("REPLY_USER", process.env.REPLY_USER);
+  console.log("REPLY_PASS", process.env.REPLY_PASS);
 
   try {
-    await transporter.sendMail({
-      from: `"お問い合わせフォーム" <${process.env.GMAIL_USER}>`,
-      to: process.env.GMAIL_USER, // 自分に通知したいメール
+    // 通知
+    await infoTransporter.sendMail({
+      from: `"お問い合わせフォーム" <${process.env.INFO_USER}>`,
+      to: process.env.TEST_USER, // 自分宛に通知（テストユーザ）
+      cc: "yoshiya@omnexjp.com",
       subject: `📩 新しい問い合わせ from ${data.name}`,
       text: `
 名前: ${data.name}
@@ -27,6 +40,23 @@ export async function POST(req: Request) {
 電話: ${data.phone || 'なし'}
 メッセージ:
 ${data.message}
+`,
+    });
+
+    // お客様への自動返信
+    await replyTransporter.sendMail({
+      from: `"Onmex JP Support" <${process.env.REPLY_USER}>`,
+      to: data.email,
+      subject: 'お問い合わせありがとうございます',
+      text: `
+${data.name} 様
+
+この度はお問い合わせいただきありがとうございます。
+内容を確認の上、担当者よりご連絡いたします。
+
+---------------------------------
+Omnex
+takayoshi@omnexjp.com
 `,
     });
 
