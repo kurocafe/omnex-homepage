@@ -30,18 +30,31 @@ export async function POST(req: Request) {
   try {
     // 通知
     await infoTransporter.sendMail({
-      from: `"お問い合わせフォーム" <${process.env.INFO_USER}>`,
+      from: `"Contact Form" <${process.env.INFO_USER}>`,
       to: process.env.TEST_USER, // 自分宛に通知（テストユーザ）
       cc: "yoshiya@omnexjp.com",
-      subject: `📩 新しい問い合わせ from ${data.name}`,
+      subject: `📩 New Inquiry from ${data.name}`,
       text: `
-名前: ${data.name}
-メール: ${data.email}
-電話: ${data.phone || 'なし'}
-メッセージ:
+[Contact Inquiry]
+
+Name: ${data.name}
+Email: ${data.email}
+Phone: ${data.phone || 'N/A'}
+Company Name: ${data.company || 'N/A'}
+Type of Business: ${data.business || 'Not selected'}
+Country of Origin: ${data.country || 'Not provided'}
+Industry: ${data.industry || 'Not provided'}
+Product Category: ${data.category || 'Not provided'}
+Experience in Japanese Market: ${data.experience || 'Not selected'}
+Target Timeframe: ${data.timeframe || 'Not provided'}
+
+Message:
 ${data.message}
+
+------------------------
+Submission Date: ${new Date().toLocaleString('en-US')}
 `,
-    });
+});
 
     // お客様への自動返信
     await replyTransporter.sendMail({
