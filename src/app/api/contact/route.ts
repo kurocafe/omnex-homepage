@@ -60,12 +60,13 @@ Submission Date: ${new Date().toLocaleString('en-US')}
     await replyTransporter.sendMail({
       from: `"Onmex JP Support" <${process.env.REPLY_USER}>`,
       to: data.email,
-      subject: 'お問い合わせありがとうございます',
+      subject: 'Thank you for your inquiry',
       text: `
-${data.name} 様
+Dear ${data.name},
 
-この度はお問い合わせいただきありがとうございます。
-内容を確認の上、担当者よりご連絡いたします。
+Thank you for contacting us.
+We have received your inquiry and will review the details shortly.
+One of our representatives will get back to you as soon as possible.
 
 ---------------------------------
 Omnex
