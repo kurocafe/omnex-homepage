@@ -20,9 +20,9 @@ export default function Connect() {
                 alt="about us"
               />
             </Link>
-            <Link href={"/projects"}>
+            <Link href={"/marketplace"}>
               <InfoButton
-                title="THE PROJECTS"
+                title="OUR MARKETPLACE"
                 imageUrl="/IMG_0643.png"
                 hoverImageUrl="/IMG_0644.png"
                 alt="the projects"
