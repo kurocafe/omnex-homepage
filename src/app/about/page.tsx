@@ -55,7 +55,7 @@ export default function AboutPage() {
       <div className='absolute inset-0 bg-black/25' />
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 py-16 max-w-4xl mx-auto text-white text-center font-serif">
-        <div className="mb-20">
+        <div className="mb-32">
           <h1 className="text-5xl font-bold mb-6 drop-shadow">Who are we</h1>
           <p className="text-lg font-semibold drop-shadow mb-2">
             OMNEX CO., LTD. is a dynamic business consultancy dedicated to empowering companies to thrive.
