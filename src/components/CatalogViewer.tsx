@@ -1,10 +1,10 @@
 // src/components/CatalogViewer.tsx
 'use client';
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.mjs`;
 
 export default function CatalogViewer() {
   const [pageNumber, setPageNumber] = useState(1);
@@ -24,23 +24,28 @@ export default function CatalogViewer() {
         file="/product_catalog_update.pdf"
         onLoadSuccess={({ numPages }) => setNumPages(numPages)}
       >
-        <Page pageNumber={pageNumber} width={600} />
+        <Page
+          pageNumber={pageNumber}
+          width={600}
+          renderTextLayer={false}
+          renderAnnotationLayer={false}
+        />
       </Document>
-      <div className="flex gap-4 mt-2">
+      <div className="flex items-center gap-4 mt-2 ">
         <button
           onClick={handlePrev}
           disabled={pageNumber <= 1}
-          className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded disabled:opacity-50"
+          className="px-4 py-2 text-black bg-gray-200 hover:bg-gray-300 rounded disabled:opacity-50"
         >
           ◀ Prev
         </button>
-        <p className="text-sm">
+        <p className="text-2xl">
           Page {pageNumber} of {numPages}
         </p>
         <button
           onClick={handleNext}
           disabled={pageNumber >= numPages}
-          className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded disabled:opacity-50"
+          className="px-4 py-2 text-black bg-gray-200 hover:bg-gray-300 rounded disabled:opacity-50"
         >
           Next ▶
         </button>
