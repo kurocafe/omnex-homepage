@@ -19,13 +19,24 @@ export default function Marketplace() {
             {/* Card 1 */}
             <Link
               href="/marketplace/customers"
-              className="group bg-white text-black rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
+              className="group bg-white text-black rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col"
             >
-              <div className="h-48 bg-cover bg-center" style={{ backgroundImage: "url(/customer-image.jpg)" }} />
-              <div className="p-6 flex flex-col gap-2">
-                <h2 className="text-xl font-semibold group-hover:text-indigo-600 transition-colors">We're Looking For Customers</h2>
-                <p className="text-sm text-gray-700">Browse our collection of products available for purchase.</p>
-                <button className="mt-4 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition-colors">
+              <div
+                className="h-48 bg-cover bg-center"
+                style={{ backgroundImage: "url(/IMG_0648.jpg)" }}
+              />
+              <div className="p-6 flex flex-col justify-between flex-1">
+                {/* 上の部分 */}
+                <div className="flex flex-col gap-2">
+                  <h2 className="text-xl font-semibold group-hover:text-indigo-600 transition-colors">
+                    We're Looking For Customers
+                  </h2>
+                  <p className="text-sm text-gray-700">
+                    Browse our collection of products available for purchase.
+                  </p>
+                </div>
+                {/* 下のボタン */}
+                <button className="mt-4 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition-colors duration-300">
                   View Items
                 </button>
               </div>
@@ -34,13 +45,22 @@ export default function Marketplace() {
             {/* Card 2 */}
             <Link
               href="/marketplace/products"
-              className="group bg-white text-black rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"
+              className="group bg-white text-black rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col"
             >
-              <div className="h-48 bg-cover bg-center" style={{ backgroundImage: "url(/products-image.jpg)" }} />
-              <div className="p-6 flex flex-col gap-2">
-                <h2 className="text-xl font-semibold group-hover:text-emerald-600 transition-colors">We're Looking For Products</h2>
-                <p className="text-sm text-gray-700">Explore items we're currently looking to purchase.</p>
-                <button className="mt-4 px-4 py-2 bg-emerald-600 text-white rounded hover:bg-emerald-700 transition-colors">
+              <div
+                className="h-48 bg-cover bg-center"
+                style={{ backgroundImage: "url(/IMG_0649.jpg)" }}
+              />
+              <div className="p-6 flex flex-col justify-between flex-1">
+                <div className="flex flex-col gap-2">
+                  <h2 className="text-xl font-semibold group-hover:text-emerald-600 transition-colors">
+                    We're Looking For Products
+                  </h2>
+                  <p className="text-sm text-gray-700">
+                    Explore items we're currently looking to purchase.
+                  </p>
+                </div>
+                <button className="mt-4 px-4 py-2 bg-emerald-600 text-white rounded hover:bg-emerald-700 transition-colors duration-300">
                   View Items
                 </button>
               </div>

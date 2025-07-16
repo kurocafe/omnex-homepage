@@ -1,11 +1,12 @@
 import BackButtonWrapper from "@/components/BackButtonWrapper";
+import CatalogViewer from "@/components/CatalogViewer";
 
-export default function Costumers() {
+export default function CustomersPage() {
   return (
     <div className="relative w-full min-h-screen">
       <div
         className="pointer-events-none fixed inset-0 bg-cover bg-center bg-no-repeat z-0"
-        style={{ backgroundImage: "url(/IMG_0642.png)" }}
+        style={{ backgroundImage: "url(/IMG_0648.jpg)" }}
       />
       <div className="absolute inset-0 bg-black/25" />
 
@@ -13,9 +14,10 @@ export default function Costumers() {
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start font-serif">
           <h1 className="text-4xl font-bold">Browse Our Catalog</h1>
           <p className="text-lg">This is Browse Our Catalog page of our application.</p>
+          <CatalogViewer />
         </main>
         <BackButtonWrapper />
       </div>
     </div>
-  )
+  );
 }
