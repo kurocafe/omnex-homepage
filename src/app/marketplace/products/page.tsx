@@ -17,12 +17,12 @@ export default function Products() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
             {/* Card 1 */}
             <Link
-              href="/marketplace/customers"
+              href="/colab"
               className="group bg-white text-black rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col"
             >
               <div
                 className="h-48 bg-cover bg-center"
-                style={{ backgroundImage: "url(/IMG_0648.jpg)" }}
+                style={{ backgroundImage: "url(/products/cat-chu.jpg)" }}
               />
               <div className="p-6 flex flex-col justify-between flex-1">
                 {/* 上の部分 */}
@@ -36,19 +36,19 @@ export default function Products() {
                 </div>
                 {/* 下のボタン */}
                 <button className="mt-4 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition-colors duration-300">
-                  View Items
+                  Contact
                 </button>
               </div>
             </Link>
 
             {/* Card 2 */}
             <Link
-              href="/marketplace/products"
+              href="/colab"
               className="group bg-white text-black rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col"
             >
               <div
                 className="h-48 bg-cover bg-center"
-                style={{ backgroundImage: "url(/IMG_0649.jpg)" }}
+                style={{ backgroundImage: "url(/products/kaki_fry.jpg)" }}
               />
               <div className="p-6 flex flex-col justify-between flex-1">
                 <div className="flex flex-col gap-2">
@@ -60,7 +60,7 @@ export default function Products() {
                   </p>
                 </div>
                 <button className="mt-4 px-4 py-2 bg-emerald-600 text-white rounded hover:bg-emerald-700 transition-colors duration-300">
-                  View Items
+                  Contact
                 </button>
               </div>
             </Link>

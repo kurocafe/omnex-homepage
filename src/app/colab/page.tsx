@@ -5,7 +5,7 @@ export default function Colab() {
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
       <div className="pointer-events-none fixed inset-0 bg-cover bg-center bg-no-repeat z-0"
-        style={{ backgroundImage: "url(/IMG_0646.webp)" }}
+        style={{ backgroundImage: "url(/colab.png)" }}
       />
       <div className='absolute inset-0 bg-black/25' />
 

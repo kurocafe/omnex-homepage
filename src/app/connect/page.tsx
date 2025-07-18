@@ -15,16 +15,16 @@ export default function Connect() {
             <Link href={"/about"}>
               <InfoButton
                 title="ABOUT US"
-                imageUrl="/IMG_0642.png"
-                hoverImageUrl="/IMG_0643.png"
+                imageUrl="/colab.png"
+                hoverImageUrl="/about.png"
                 alt="about us"
               />
             </Link>
             <Link href={"/marketplace"}>
               <InfoButton
                 title="OUR MARKETPLACE"
-                imageUrl="/IMG_0643.png"
-                hoverImageUrl="/IMG_0644.png"
+                imageUrl="/about.png"
+                hoverImageUrl="/market.png"
                 alt="the projects"
               />
             </Link>
@@ -33,8 +33,8 @@ export default function Connect() {
             <Link href={"/colab"}>
               <InfoButton
                 title="COLAB WITH US"
-                imageUrl="/IMG_0644.png"
-                hoverImageUrl="/IMG_0642.png"
+                imageUrl="/market.png"
+                hoverImageUrl="/colab.png"
                 alt="about us"
               />
             </Link>

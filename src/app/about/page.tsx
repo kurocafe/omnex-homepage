@@ -48,11 +48,11 @@ export default function AboutPage() {
 
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
-      <div
+      {/* <div
         className="pointer-events-none fixed inset-0 bg-cover bg-center bg-no-repeat z-0"
         style={{ backgroundImage: "url(/IMG_0645.webp)" }}
-      />
-      <div className='absolute inset-0 bg-black/25' />
+      /> */}
+      <div className='absolute inset-0 bg-gray-800/75' />
 
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-6 py-16 max-w-4xl mx-auto text-white text-center font-serif">
         <div className="mb-32">

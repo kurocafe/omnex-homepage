@@ -6,9 +6,9 @@ export default function Marketplace() {
     <div className="relative w-full min-h-screen">
       <div
         className="pointer-events-none fixed inset-0 bg-cover bg-center bg-no-repeat z-0"
-        style={{ backgroundImage: "url(/IMG_0647.png)" }}
+        style={{ backgroundImage: "url(/market.png)" }}
       />
-      <div className="absolute inset-0 bg-black/25" />
+      <div className="absolute inset-0 bg-black/40" />
 
       <div className="relative z-10 grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] text-white">
         <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start font-serif w-full max-w-5xl">
@@ -23,7 +23,7 @@ export default function Marketplace() {
             >
               <div
                 className="h-48 bg-cover bg-center"
-                style={{ backgroundImage: "url(/IMG_0648.jpg)" }}
+                style={{ backgroundImage: "url(/customer.png)" }}
               />
               <div className="p-6 flex flex-col justify-between flex-1">
                 {/* 上の部分 */}
@@ -49,7 +49,7 @@ export default function Marketplace() {
             >
               <div
                 className="h-48 bg-cover bg-center"
-                style={{ backgroundImage: "url(/IMG_0649.jpg)" }}
+                style={{ backgroundImage: "url(/products/lotus_root.jpg)" }}
               />
               <div className="p-6 flex flex-col justify-between flex-1">
                 <div className="flex flex-col gap-2">
