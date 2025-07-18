@@ -28,19 +28,19 @@ export default function CatalogViewer() {
   };
 
   return (
-    <div className="flex flex-col items-center gap-2 mt-4">
+    <div className="flex flex-col items-center gap-2 mt-0">
       <Document
         file="/product_catalog_update.pdf"
         onLoadSuccess={({ numPages }) => setNumPages(numPages)}
       >
         <Page
           pageNumber={pageNumber}
-          width={600}
+          width={430}
           renderTextLayer={false}
           renderAnnotationLayer={false}
         />
       </Document>
-      <div className="flex items-center gap-4 mt-2 ">
+      <div className="flex items-center gap-2 mt-2 ">
         <button
           onClick={handlePrev}
           disabled={pageNumber <= 1}
