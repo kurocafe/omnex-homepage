@@ -29,7 +29,7 @@ export default function Marketplace() {
                 {/* 上の部分 */}
                 <div className="flex flex-col gap-2">
                   <h2 className="text-xl font-semibold group-hover:text-indigo-600 transition-colors">
-                    We're Looking For Customers
+                    We&apos;re Looking For Customers
                   </h2>
                   <p className="text-sm text-gray-700">
                     Browse our collection of products available for purchase.
@@ -54,10 +54,10 @@ export default function Marketplace() {
               <div className="p-6 flex flex-col justify-between flex-1">
                 <div className="flex flex-col gap-2">
                   <h2 className="text-xl font-semibold group-hover:text-emerald-600 transition-colors">
-                    We're Looking For Products
+                    We&apos;re Looking For Products
                   </h2>
                   <p className="text-sm text-gray-700">
-                    Explore items we're currently looking to purchase.
+                    Explore items we&apos;re currently looking to purchase.
                   </p>
                 </div>
                 <button className="mt-4 px-4 py-2 bg-emerald-600 text-white rounded hover:bg-emerald-700 transition-colors duration-300">

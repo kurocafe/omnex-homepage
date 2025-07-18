@@ -18,7 +18,7 @@ const timelineData = [
 ]
 
 export default function AboutPage() {
-  const [selectedYear, setSelectedYear] = useState<Number | null>(null);
+  const [selectedYear, setSelectedYear] = useState<number | null>(null);
   const popupRef = useRef<HTMLDivElement | null>(null);
 
   const handleClick = (year: number) => {
@@ -67,7 +67,7 @@ export default function AboutPage() {
             Our team works closely with clients to develop tailored strategies that drive growth and efficiency, ensuring practical and innovative solutions.
           </p>
           <p className="text-lg drop-shadow">
-            At OMNEX, we're committed to building lasting relationships and helping businesses navigate the complexities of the modern market.
+            At OMNEX, we&apos; re committed to building lasting relationships and helping businesses navigate the complexities of the modern market.
           </p>
         </div>
 
