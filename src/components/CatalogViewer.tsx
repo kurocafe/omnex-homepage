@@ -1,7 +1,7 @@
 // src/components/CatalogViewer.tsx
 'use client';
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.mjs`;
@@ -9,6 +9,15 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 export default function CatalogViewer() {
   const [pageNumber, setPageNumber] = useState(1);
   const [numPages, setNumPages] = useState<number>(0);
+  const prevPageRef = useRef(pageNumber);
+
+  useEffect(() => {
+    // ページ番号が変わったときにスクロール位置を維持
+    if (prevPageRef.current !== pageNumber) {
+      window.scrollTo({ top: 0, behavior: "auto" }); // 必要ならtop: window.scrollYに
+      prevPageRef.current = pageNumber;
+    }
+  }, [pageNumber]);
 
   const handlePrev = () => {
     if (pageNumber > 1) setPageNumber(pageNumber - 1);
@@ -19,7 +28,7 @@ export default function CatalogViewer() {
   };
 
   return (
-    <div className="flex flex-col items-center gap-4 mt-8">
+    <div className="flex flex-col items-center gap-2 mt-4">
       <Document
         file="/product_catalog_update.pdf"
         onLoadSuccess={({ numPages }) => setNumPages(numPages)}
