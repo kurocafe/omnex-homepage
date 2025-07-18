@@ -22,7 +22,7 @@ export default function Home() {
         >
           <div className="relative w-24 h-16 top-4 rounded-2xl overflow-hidden shadow-lg rotate-3 z-10 scale-80">
             <Image
-              src={"/IMG_0642.png"}
+              src={"/about.png"}
               alt="img1"
               fill
               style={{ objectFit: "cover" }}
@@ -30,7 +30,7 @@ export default function Home() {
           </div>
           <div className="relative w-24 h-16 rounded-2xl overflow-hidden shadow-lg rotate-6 ">
             <Image
-              src={"/IMG_0644.png"}
+              src={"/colab.png"}
               alt="img2"
               fill
               style={{ objectFit: "cover" }}
@@ -38,7 +38,7 @@ export default function Home() {
           </div>
           <div className="relative w-24 h-16 top-4 rounded-2xl overflow-hidden shadow-lg rotate-24 scale-90">
             <Image
-              src={"/IMG_0643.png"}
+              src={"/market.png"}
               alt="img3"
               fill
               style={{ objectFit: "cover" }}

@@ -31,7 +31,7 @@ export async function POST(req: Request) {
     // 通知
     await infoTransporter.sendMail({
       from: `"Contact Form" <${process.env.INFO_USER}>`,
-      to: process.env.TEST_USER, // 自分宛に通知（テストユーザ）
+      to: process.env.GMAIL_USER, // 自分宛に通知（テストユーザ）
       cc: "yoshiya@omnexjp.com",
       subject: `📩 New Inquiry from ${data.name}`,
       text: `

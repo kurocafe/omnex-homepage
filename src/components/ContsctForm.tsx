@@ -36,7 +36,7 @@ export default function ContactForm() {
       alert("Please fill in all required fields.");
       return;
     }
-    console.log("送信データ:", formData);
+    // console.log("送信データ:", formData);
     const response = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -44,9 +44,9 @@ export default function ContactForm() {
     });
 
     if (response.ok) {
-      alert('送信完了しました！');
+      alert('Thank you! Your message was sent successfully.');
     } else {
-      alert('送信に失敗しちゃった💦');
+      alert('Oops! Something went wrong. Please try again later.');
     }
   };
 
