@@ -1,3 +1,5 @@
+'use client';
+
 import BackButtonWrapper from "@/components/BackButtonWrapper";
 import CatalogViewer from "@/components/CatalogViewer";
 
