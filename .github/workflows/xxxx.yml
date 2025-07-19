@@ -31,17 +31,12 @@ jobs:
           INFO_PASS: ${{ secrets.INFO_PASS }}
           REPLY_PASS: ${{ secrets.REPLY_PASS }}
 
-      - name: Set Git identity
+      - name: Git identity
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
-
-          # gh-pagesのpush先をトークン認証URLに書き換え
           npx gh-pages -d out -u "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>" -r https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
