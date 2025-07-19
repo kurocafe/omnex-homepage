@@ -1,0 +1,32 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node.js セットアップ
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      # ワークフローでenv指定
+      - name: Build
+        run: npm run build
+        env:
+          GMAIL_USER: ${{ vars.GMAIL_USER }}
+          INFO_USER: ${{ vars.INFO_USER }}
+          REPLY_USER: ${{ vars.REPLY_USER }}
+          TEST_USER: ${{ vars.TEST_USER }}
+          # シークレットの場合
+          INFO_PASS: ${{ secrets.INFO_PASS }}
+          REPLY_PASS: ${{ secrets.REPLY_PASS }}
+
+      - name: Deploy
+        run: npm run deploy
