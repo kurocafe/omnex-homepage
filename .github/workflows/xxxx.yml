@@ -35,8 +35,11 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          npx gh-pages -d out -u "github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>" -r https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          npx gh-pages -d out \
+            -u 'github-actions <action@github.com>' \
+            -r https://x-access-token:${GITHUB_TOKEN}@github.com/kurocafe/omnex-homepage.git
