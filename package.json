@@ -5,7 +5,7 @@
   "homepage": "https://kurocafe.github.io/omnex-homepage/",
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "predeploy": "npm run build",
