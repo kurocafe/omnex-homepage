@@ -40,4 +40,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# テストで使った画像をこちらにまとめる
 public/test
